@@ -1,0 +1,24 @@
+{
+  "name": "library_app",
+  "version": "1.0.0",
+  "description": "Your favourite books",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "build": "rollup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Shkatula Julia",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^4.17.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0"
+  }
+}
