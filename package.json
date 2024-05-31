@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Your favourite books",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "app.js",
-    "build": "rollup",
+    "start": "live-server",
+    "build": "rollup -c --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,11 +15,15 @@
   "author": "Shkatula Julia",
   "license": "ISC",
   "dependencies": {
-    "rollup": "^4.17.2"
+    "live-server": "^1.2.2",
+    "on-change": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^9.3.0",
-    "globals": "^15.3.0"
+    "globals": "^15.3.0",
+    "rollup-plugin-import-css": "^3.5.0",
+    "rollup": "^4.17.2"
   }
 }
