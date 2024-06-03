@@ -2,6 +2,7 @@ import { AbstractView } from "../../common/view.js";
 import onChange from "on-change";
 import { Header } from "../../componenets/header/header.js";
 import { Search } from "../../componenets/search/search.js";
+import { CardList } from "../../componenets/card-list/card-list.js";
 
 export class MainView extends AbstractView {
     state = {
@@ -27,6 +28,9 @@ export class MainView extends AbstractView {
             this.state.loading = false;
             this.state.list = data.docs;
         }
+        if (path === 'list' || path === 'loading') {
+            this.render();
+        }
     }
 
     async loadList(q, offset){
@@ -44,6 +48,7 @@ export class MainView extends AbstractView {
     render(){
         const main = document.createElement('div');
         main.append(new Search(this.state).render());
+        main.append(new CardList(this.appState, this.state));
         this.app.innerHTML = '';
         this.app.append(main);
         this.renderHeader();
